@@ -1,4 +1,4 @@
-module.exports = function check(str, bracketsConfig) {
+function check(str, bracketsConfig) {
   let resault = [];
   let reversBrecket;
 
@@ -35,8 +35,21 @@ module.exports = function check(str, bracketsConfig) {
   }
   
   if (resault.length>0){
-    return false;
+    console.log('false');
   }else{
-    return true;
+    console.log('true');
   }
+  
 }
+
+check('())(', [['(', ')']]) // -> false
+check('[]][[]', [['(', ')'], ['[', ']'], ['{', '}']]) // -> true
+// check('111115611111111156111111112222888888222255778777787755556666777777777766222221111222288888822225577877778775555666677777777776622222', [['1', '2'], ['3', '4'], ['5', '6'], ['7', '7'], ['8', '8']]) // -> true
+
+
+
+
+
+
+
+
